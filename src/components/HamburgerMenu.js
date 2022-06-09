@@ -1,16 +1,15 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-
+import "../App.css";
 const COLORS = {
   primaryDark: "#115b4c",
   primaryLight: "#00BCB0",
 };
 
 const MenuLabel = styled.label`
-  background-color: ${COLORS.primaryLight};
   position: fixed;
-  top: 3rem;
+  top: 0.7rem;
   right: 3rem;
   border-radius: 50%;
   height: 4rem;
@@ -23,8 +22,8 @@ const MenuLabel = styled.label`
 
 const NavBackground = styled.div`
   position: fixed;
-  top: 6.5rem;
-  right: 6.5rem;
+  top: 0.8rem;
+  right: 3rem;
   height: 6rem;
   width: 6rem;
   border-radius: 50%;
@@ -140,7 +139,11 @@ function HamburgerMenu() {
   const handleClick = () => setClick(!click);
   return (
     <>
-      <MenuLabel htmlFor="navi-toggle" onClick={handleClick}>
+      <MenuLabel
+        htmlFor='navi-toggle'
+        onClick={handleClick}
+        className='hamburgMenu'
+      >
         <Icon clicked={click}>&nbsp;</Icon>
       </MenuLabel>
       <NavBackground clicked={click}>&nbsp;</NavBackground>
@@ -148,33 +151,33 @@ function HamburgerMenu() {
       <Navigation clicked={click}>
         <List>
           <li>
-            <ItemLink onClick={handleClick} to="/">
+            <ItemLink onClick={handleClick} to='/'>
               Home
             </ItemLink>
           </li>
           <li>
-            <ItemLink onClick={handleClick} to="/portfolio">
+            <ItemLink onClick={handleClick} to='/portfolio'>
               Portfolio
             </ItemLink>
           </li>
           <li>
-            <ItemLink onClick={handleClick} to="/blog">
-              Blog
+            <ItemLink onClick={handleClick} to='/gallery'>
+              Galerry
             </ItemLink>
           </li>
           <li>
-            <ItemLink onClick={handleClick} to="/contact">
+            <ItemLink onClick={handleClick} to='/contact'>
               Contact me
             </ItemLink>
           </li>
           <li>
-            <ItemLink onClick={handleClick} to="/login">
-              Log-In
+            <ItemLink onClick={handleClick} to='/carousel'>
+              Carousel
             </ItemLink>
           </li>
           <li>
-            <ItemLink onClick={handleClick} to="/carousel">
-              Carousel
+            <ItemLink onClick={handleClick} to='/bio'>
+              BIO
             </ItemLink>
           </li>
         </List>

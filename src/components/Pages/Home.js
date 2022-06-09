@@ -1,178 +1,208 @@
 import React from "react";
-import profileImage from "../Images/iconProfile.jpg";
-import ListGroup from "react-bootstrap/ListGroup";
-import Accordion from "react-bootstrap/Accordion";
-import ComtactINF from "./PagesComponents/Contactcomponent";
+import { useState, useEffect } from "react";
+import Button from "react-bootstrap/Button";
+
+import NavBar from "./PagesComponents/NavBar";
+import Cards from "../Main-card";
+import Cards2 from "../Main-images-card";
 //css
-import "../style/Home.css";
+import "../style/navigationStyle.css";
 
 //img
-import work from "../Images/work.png";
-import study from "../Images/study.png";
-const Home = () => {
-  return (
-    <>
-      <div className="header"></div>
-      <div className="ProfileInfo">
-        <div class="d-flex position-relative" id="profcard">
-          <img
-            src={profileImage}
-            class="flex-shrink-0 me-3"
-            alt="Profile image"
-          />
-          <div className="infoCard">
-            <h5 class="mt-0">Gedzuke Dmytro</h5>
-            <p>
-              Hello my reader. My name is Dmitro. I am 21 years old and I live
-              in Kharkov. I am a student and learn from Kharkov National
-              University of Radioelectronics (NURE) at 126 specialties (126 -
-              information systems and technologies)...
-            </p>
-            <a href="/portfolio/#bio" class="stretched-link">
-              More
-            </a>
-          </div>
-        </div>
-      </div>
-      <hr />
-      <div className="experience">
-        <div className="Education">
-          <h1>
-            <img src={study} alt="educimg" /> Education
-          </h1>
-          <hr />
-          <ListGroup>
-            <ListGroup.Item
-              action
-              href="https://khpcc.com"
-              target="_blank"
-              id="linkitem"
-            >
-              <h1 className="LinkEd">HPKK</h1>
-            </ListGroup.Item>
-            <ListGroup.Item
-              action
-              href="https://nure.ua/ru/"
-              target="_blank"
-              id="linkitem"
-            >
-              <h1 className="LinkEd">NURE</h1>
-            </ListGroup.Item>
-          </ListGroup>
-        </div>
-        <div className="Work">
-          <h1>
-            <img src={work} alt="workimg" />
-            Work Experience
-          </h1>
-          <hr />
-          <ListGroup>
-            <ListGroup.Item
-              action
-              href="https://dental-technika.com.ua"
-              target="_blank"
-              id="linkitem"
-            >
-              <h1 className="LinkEd">Dental Technika</h1>
-              <p>
-                <b>Job: </b>Photo editor
-              </p>
-            </ListGroup.Item>
-            <ListGroup.Item
-              action
-              href="https://gemmind.net/"
-              target="_blank"
-              id="linkitem"
-            >
-              <h1 className="LinkEd">GemmMind</h1>
-              <p>
-                <b>Job: </b>Javascript Coder
-              </p>
-            </ListGroup.Item>
-          </ListGroup>
-        </div>
-      </div>
-      <div className="FAQ">
-        <h1>FAQ</h1>
-        <div className="question-box">
-          <div className="left-box">
-            <Accordion>
-              <Accordion.Item eventKey="0" id="questionBox">
-                <Accordion.Header>
-                  <h1>How is your progress in JS?</h1>
-                </Accordion.Header>
-                <Accordion.Body>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
-                </Accordion.Body>
-              </Accordion.Item>
-              <Accordion.Item eventKey="1" id="questionBox">
-                <Accordion.Header>
-                  <h1>Your rate</h1>
-                </Accordion.Header>
-                <Accordion.Body>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
-                </Accordion.Body>
-              </Accordion.Item>
-            </Accordion>
-          </div>
-          <div className="right-box">
-            <Accordion>
-              <Accordion.Item eventKey="0" id="questionBox">
-                <Accordion.Header>
-                  <h1>How your can work and study?</h1>
-                </Accordion.Header>
-                <Accordion.Body>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
-                </Accordion.Body>
-              </Accordion.Item>
-              <Accordion.Item eventKey="1" id="questionBox">
-                <Accordion.Header>
-                  <h1>Where your Projects?</h1>
-                </Accordion.Header>
-                <Accordion.Body>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
-                </Accordion.Body>
-              </Accordion.Item>
-            </Accordion>
-          </div>
-        </div>
-      </div>
-      <ComtactINF
-        tel="+38(066)40-38-807"
-        mail="dema2000g@gmail.com"
-        gitlink="Zoro-JS2"
-        portfoliolink="Projects"
-      />
-    </>
-  );
-};
+import IntroImg from "../Images/portf.jpg";
+import FlyMe from "../Images/flyME.jpg";
+import MyCar from "../Images/myCar.jpg";
+import Yach from "../Images/Yach.jpg";
+import car from "../Images/car.svg";
+import boatWater from "../Images/boat.svg";
+import airplane from "../Images/air.svg";
+import arrow from "../Images/arrow-down.svg";
+import storygif from "../Images/Story.gif";
+import StoryImg2 from "../Images/programmer2.png";
+import gmail from "../Images/gmail.png";
+import github from "../Images/github.png";
+function Navigationheader() {
+  const [counter, setCount] = useState(0);
+  const [name, setName] = useState("");
+  const [email, setemail] = useState("");
+  const [isMousedOver, setMouseOver] = useState(false);
+  function handle_change(event) {
+    setName(event.target.value);
+    setemail(event.target.value + "@gmail.com");
+    console.log(event.target.value);
+  }
 
-export default Home;
+  function handleMouseOver() {
+    setMouseOver(!isMousedOver);
+  }
+
+  function handle_click(event) {
+    alert("We send your message to dema2000g@gmail.com");
+    // console.log({ name });
+
+    event.preventDefault();
+  }
+  return (
+    <div>
+      <NavBar active={true} activeLog={false} />
+      <div className='MeInfo'>
+        <h1>Gedzyik Dmytro Oleksandrovich</h1>
+        <div className='First_block'>
+          <div className='intro'>
+            <h2>Hello my reader. I very hope you enjoy my web development.</h2>
+            <label for='exampleDataList' class='form-label'></label>
+            <input
+              class='form-control'
+              list='datalistOptions'
+              id='exampleDataList'
+              placeholder='Type to search...'
+            />
+            <datalist id='datalistOptions'>
+              <option value='Projects' id='0' />
+              <option value='Portfolio' id='1' />
+              <option value='Photos' id='2' />
+              <option value='Log-in' id='3' />
+            </datalist>
+            <h1>Get the rest of the story</h1>
+            <Button id='btn-inf2'>
+              <a href='#down'>
+                <img src={arrow} />
+              </a>
+            </Button>
+          </div>
+          <img src={IntroImg} />
+        </div>
+      </div>
+      <div className='box'>
+        <p>Ready, Set, Go</p>
+        <h3>
+          I love to travel and discover new things, so for your attention I
+          present excerpts from my life
+        </h3>
+        <div className='prom-img'>
+          <Cards
+            img={airplane}
+            title='Like flying'
+            text="I'm fly on a plane more than 12 times in different countries "
+          />
+          <Cards
+            img={boatWater}
+            title='Like swimming'
+            text='Only onece I ride on boat'
+          />
+          <Cards
+            img={car}
+            title='Like driving'
+            text='I have driver licence, and a lot of times I drive on my car'
+          />
+        </div>
+        <div className='prom-memory'>
+          <Cards2 img={FlyMe} text='My first fly' />
+          <Cards2 img={Yach} text='No photos, but it look like on this image' />
+          <Cards2 img={MyCar} text='My first car' />
+        </div>
+      </div>
+      <div className='Context'>
+        <h1 id='down'>Story</h1>
+        <div className='block1'>
+          <h1>
+            In college I started learning html+css+Js. It became interesting to
+            me and I delved into this course. Also at work, I developed a
+            website in React JS.
+          </h1>
+          <img src={storygif} />
+        </div>
+        <div className='block2'>
+          <img src={StoryImg2} />
+          <h1>
+            Later I was added to the project for creating mobile applications
+            and I took part in it a little. You can see examples of my work in
+            the
+            <a href='/gallery'>
+              <b> gallery</b>
+            </a>
+            .
+          </h1>
+        </div>
+      </div>
+      <div className='Footer'>
+        <div className='Social'>
+          <h1>Subscribe for me and check new product announcements.</h1>
+          <a href='/' className='Social-item' target='_blank'>
+            <div className='Social-item-context'>
+              <h2>Linked-IN</h2>
+              <img src={gmail} />
+              <h3>Follow me</h3>
+            </div>
+          </a>
+          <a
+            href='https://github.com/Zoro-JS2/'
+            className='Social-item'
+            target='_blank'
+          >
+            <div className='Social-item-context'>
+              <h2>Git-Hub</h2>
+              <img src={github} />
+              <h3>Follow me</h3>
+            </div>
+          </a>
+          <a
+            href='https://drive.google.com/drive/u/0/my-drive'
+            className='Social-item'
+            target='_blank'
+          >
+            <div className='Social-item-context'>
+              <h2>Google Drive</h2>
+              <img src={gmail} />
+              <h3>Follow me</h3>
+            </div>
+          </a>
+        </div>
+        <form onSubmit={handle_click} name='user'>
+          <div class='mb-3'>
+            <label for='exampleFormControlInput1' class='form-label'>
+              Email address
+            </label>
+            <input
+              type='email'
+              class='form-control'
+              id='exampleFormControlInput1'
+              placeholder='name@example.com'
+            />
+          </div>
+          <div class='mb-3'>
+            <label for='exampleFormControlTextarea1' class='form-label'>
+              you can write some text for inform me
+            </label>
+            <textarea
+              class='form-control'
+              id='FormControlTextarea1'
+              rows='3'
+            ></textarea>
+          </div>
+          <div class='mb-3'>
+            <label for='formFileMultiple' class='form-label'>
+              Multiple files input example
+            </label>
+            <input
+              class='form-control'
+              type='file'
+              id='formFileMultiple'
+              multiple
+            />
+          </div>
+          <button
+            class='btn btn-success'
+            className='Accept_btn'
+            type='submit'
+            onMouseOver={handleMouseOver}
+            onMouseOut={handleMouseOver}
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  );
+}
+export default Navigationheader;
