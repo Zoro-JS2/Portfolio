@@ -23,8 +23,15 @@ body {
     opacity: 1;
   }
 }
+/* /////////////////////////// */
+
 @media only screen and (max-width: 768px) {
   .pages {
     font-size: 2.5rem;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .hamburgMenu {
+    visibility: hidden;
   }
 }

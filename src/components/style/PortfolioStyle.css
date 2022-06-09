@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Koulen&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -21,6 +23,34 @@ h1 b {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
+
+/*   Sushi Card  */
+.Sushicard {
+  padding: 10px;
+  width: 350px;
+  min-height: 360px;
+  margin: 5%;
+  background-color: white;
+}
+.Sushicard h5 {
+  font-family: "Koulen", cursive;
+}
+.Sushicard p {
+  text-align: left;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Roboto Condensed", sans-serif;
+  color: rgb(0, 0, 0);
+}
+.Sushicard:hover {
+  box-shadow: 3px 4px 10px rgb(88, 88, 88);
+  background-color: rgb(238, 238, 238);
+}
+.Sushicard img {
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
 }
 .card {
   padding: 10px;
@@ -80,10 +110,20 @@ h1 b {
 .footer {
   padding-bottom: 20px;
 }
-.projects {
+.containerProjects {
   width: 100%;
   background-color: black;
-  height: 50vh;
+  height: 35vh;
+  background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20200731/pngtree-blue-carbon-background-with-sport-style-and-golden-light-image_371487.jpg);
+  background-size: 100%;
+  background-position: center;
+  background-attachment: fixed;
+}
+.containerProjects h1 {
+  text-align: center;
+  color: #ff8a56;
+}
+.projects {
   display: flex;
   justify-content: center;
   align-items: center;

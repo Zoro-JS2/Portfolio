@@ -7,22 +7,23 @@ import "../../Style.css";
 const CarouselContainer = () => {
   return (
     <>
-      <div className="CarouselContainer">
+      <div className='CarouselContainer'>
+        <h1>Carousel</h1>
         <Carousel>
           <Carousel.Item>
-            <img className="d-block " src={sea1} alt="First slide" />
+            <img className='d-block ' src={sea1} alt='First slide' />
             <Carousel.Caption>
               <h3>Sea1</h3>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <img className="d-block" src={sea2} alt="Second slide" />
+            <img className='d-block' src={sea2} alt='Second slide' />
             <Carousel.Caption>
               <h3>Sea2</h3>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <img className="d-block " src={sea3} alt="Third slide" />
+            <img className='d-block ' src={sea3} alt='Third slide' />
 
             <Carousel.Caption>
               <h3>Sea3</h3>

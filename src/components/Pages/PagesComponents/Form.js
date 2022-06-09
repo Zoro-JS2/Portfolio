@@ -10,17 +10,17 @@ export default function Forma() {
     setIsSubmit(true);
   };
   return (
-    <Form className="form">
+    <Form className='form'>
       <h1>FeedBack</h1>
-      <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+      <Form.Group className='mb-3' controlId='exampleForm.ControlInput1'>
         <Form.Label>Email address</Form.Label>
-        <Form.Control type="email" placeholder="name@example.com" />
+        <Form.Control type='email' placeholder='name@example.com' />
       </Form.Group>
-      <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+      <Form.Group className='mb-3' controlId='exampleForm.ControlTextarea1'>
         <Form.Label>Textarea</Form.Label>
-        <Form.Control as="textarea" rows={4} placeholder="Input some text..." />
+        <Form.Control as='textarea' rows={4} placeholder='Input some text...' />
       </Form.Group>
-      <Button variant="success" onClick={handleSubmit}>
+      <Button variant='success' onClick={handleSubmit}>
         Success
       </Button>
     </Form>

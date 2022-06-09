@@ -11,7 +11,6 @@ function Login() {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormErrors(validate(formValues));
@@ -47,11 +46,14 @@ function Login() {
   };
 
   return (
-    <div className="container">
-      <p className="Log-in_title">LOG-IN</p>
-      <div className="userdata">
+    <div className='container'>
+      <p className='Log-in_title'>LOG-IN</p>
+      <div className='userdata'>
         {Object.keys(formErrors).length === 0 && isSubmit ? (
-          <div className="message_success">Signed in successfully</div>
+          <div className='message_success'>
+            Signed in successfully
+            <br /> <a href='/home'>Home</a>
+          </div>
         ) : (
           <pre>{JSON.stringify(formValues, undefined, 2)}</pre>
         )}
@@ -59,42 +61,44 @@ function Login() {
 
       <form onSubmit={handleSubmit}>
         <h1>Login Form</h1>
-        <div className="ui divider"></div>
-        <div className="ui form">
-          <div className="field">
+        <div className='ui divider'></div>
+        <div className='ui_form'>
+          <div className='field'>
             <label>Username</label>
             <input
-              type="text"
-              name="username"
-              placeholder="Username"
+              type='text'
+              name='username'
+              placeholder='Username'
               value={formValues.username}
               onChange={handleChange}
             />
           </div>
           <p>{formErrors.username}</p>
-          <div className="field">
-            <label>Emai</label>
+          <div className='field'>
+            <label>Emai___: </label>
             <input
-              type="text"
-              name="email"
-              placeholder="Email"
+              type='text'
+              name='email'
+              placeholder='Email'
               value={formValues.email}
               onChange={handleChange}
             />
           </div>
           <p>{formErrors.email}</p>
-          <div className="field">
+          <div className='field'>
             <label>Password</label>
             <input
-              type="password"
-              name="password"
-              placeholder="Password"
+              type='password'
+              name='password'
+              placeholder='Password'
               value={formValues.password}
               onChange={handleChange}
             />
           </div>
           <p>{formErrors.password}</p>
-          <button className="fluid ui button blue">Submit</button>
+          <button className='fluid ui button blue' id='submit'>
+            Submit
+          </button>
         </div>
       </form>
     </div>
